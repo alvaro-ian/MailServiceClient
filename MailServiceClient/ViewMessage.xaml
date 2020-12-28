@@ -1,0 +1,68 @@
+﻿<Window x:Class="MailServiceClient.ViewMessage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailServiceClient"
+        mc:Ignorable="d"
+        Title="ViewMessage" Height="450" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <StackPanel Margin="10">
+            <DockPanel Margin="0 0 0 5">
+                <TextBlock Text="De: "
+                           FontWeight="Bold"/>
+                <TextBlock x:Name="remetenteTxt"
+                           Text="TESTE"
+                           HorizontalAlignment="Right"
+                           MinWidth="250"/>
+            </DockPanel>
+            <DockPanel Margin="0 0 0 5">
+                <TextBlock Text="Para: "
+                           FontWeight="Bold"/>
+                <TextBlock x:Name="destinatarioTxt"
+                           Text="DESTINO"
+                           HorizontalAlignment="Right"
+                           MinWidth="250"/>
+            </DockPanel>
+            <TextBlock Text="Assunto:"
+                       FontWeight="Bold"
+                       Margin="0 0 0 5"/>
+            <TextBlock x:Name="assuntoTxt"
+                       Text="ASSUNTO"
+                       Margin="0 0 0 5"/>
+            <TextBlock Text="Mensagem:"
+                       FontWeight="Bold"
+                       Margin="0 0 0 5"/>
+            <TextBlock x:Name="corpoTxt"
+                       Text="CORPO"
+                       MinHeight="200"
+                       TextWrapping="Wrap"/>
+
+            <DockPanel Width="320"
+                       Margin="0 20 0 10"
+                       HorizontalAlignment="Center">
+                <Button x:Name="apagarBtn"
+                        DockPanel.Dock="Left"
+                        Width="100"
+                        Content="Apagar"
+                        Click="apagarBtn_Click"/>
+                <Button x:Name="respondBtn"
+                        DockPanel.Dock="Right"
+                        Width="100"
+                        Content="Responder"
+                        Click="respondBtn_Click"/>
+                
+                <Button x:Name="redirectBtn"
+                        Width="100"
+                        Content="Encaminhar"
+                        Click="redirectBtn_Click"/>
+            </DockPanel>
+            <Button x:Name="backBtn"
+                    HorizontalAlignment="Right"
+                    Width="100"
+                    Margin="0 0 22 0"
+                    Content="Voltar"
+                    Click="backBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
